@@ -320,10 +320,6 @@ END_IMGUI_FUNC
 //    IMGUI_API void          PushFont(ImFont* font);                                             // use NULL as a shortcut to push default font
 // Unsupported arg type ImFont* font
 //    IMGUI_API void          PopFont();
-IMGUI_FUNCTION(PushFont)
-CALL_FUNCTION_NO_RET(PushFont, (ImFont*)lua_touserdata(L, 1))
-END_IMGUI_FUNC
-
 IMGUI_FUNCTION(PopFont)
 CALL_FUNCTION_NO_RET(PopFont)
 END_IMGUI_FUNC
@@ -1733,10 +1729,25 @@ IMGUI_FUNCTION(StyleColorsDark)
 DEFAULT_ARG(ImGuiStyle*, dst, NULL)
 CALL_FUNCTION_NO_RET(StyleColorsDark, dst)
 END_IMGUI_FUNC
+//    IMGUI_API void          StyleColorsOld(ImGuiStyle* dst = NULL);
+IMGUI_FUNCTION(StyleColorsOld)
+DEFAULT_ARG(ImGuiStyle*, dst, NULL)
+CALL_FUNCTION_NO_RET(StyleColorsOld, dst)
+END_IMGUI_FUNC
 //    IMGUI_API void          StyleColorsLight(ImGuiStyle* dst = NULL);
 IMGUI_FUNCTION(StyleColorsLight)
 DEFAULT_ARG(ImGuiStyle*, dst, NULL)
 CALL_FUNCTION_NO_RET(StyleColorsLight, dst)
+END_IMGUI_FUNC
+//    IMGUI_API void          StyleColorsAppleGreen(ImGuiStyle* dst = NULL);
+IMGUI_FUNCTION(StyleColorsAppleGreen)
+DEFAULT_ARG(ImGuiStyle*, dst, NULL)
+CALL_FUNCTION_NO_RET(StyleColorsAppleGreen, dst)
+END_IMGUI_FUNC
+//    IMGUI_API void          StyleColorsVisualStudioDark(ImGuiStyle* dst = NULL);
+IMGUI_FUNCTION(StyleColorsVisualStudioDark)
+DEFAULT_ARG(ImGuiStyle*, dst, NULL)
+CALL_FUNCTION_NO_RET(StyleColorsVisualStudioDark, dst)
 END_IMGUI_FUNC
 //    IMGUI_API void          SetItemDefaultFocus();                                              // make last item the default focused item of a window (WIP navigation branch only). Pleaase use instead of SetScrollHere().
 IMGUI_FUNCTION(SetItemDefaultFocus)
