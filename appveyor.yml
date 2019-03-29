@@ -15,7 +15,7 @@ build_script:
     - cd %BUILD_DIR%
     - cmake -DCMAKE_GENERATOR_PLATFORM=x64 .
     - msbuild Project.sln
-    - dir /s c:\projects\love-imgui
+    - dir /s c:\projects\love-imgui-modified
 
 test: off
 
