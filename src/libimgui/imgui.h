@@ -442,8 +442,10 @@ namespace ImGui
     IMGUI_API void          StyleColorsClassic(ImGuiStyle* dst = NULL);
     IMGUI_API void          StyleColorsDark(ImGuiStyle* dst = NULL);
     IMGUI_API void          StyleColorsLight(ImGuiStyle* dst = NULL);
+    IMGUI_API void          StyleColorsOld(ImGuiStyle* dst = NULL);
+    IMGUI_API void          StyleColorsAppleGreen(ImGuiStyle* dst = NULL);
+    IMGUI_API void          StyleColorsVisualStudioDark(ImGuiStyle* dst = NULL);
 
-    // Focus
     // (FIXME: Those functions will be reworked after we merge the navigation branch + have a pass at focusing/tabbing features.)
     // (Prefer using "SetItemDefaultFocus()" over "if (IsWindowAppearing()) SetScrollHere()" when applicable, to make your code more forward compatible when navigation branch is merged)
     IMGUI_API void          SetItemDefaultFocus();                                              // make last item the default focused item of a window (WIP navigation branch only). Pleaase use instead of SetScrollHere().
